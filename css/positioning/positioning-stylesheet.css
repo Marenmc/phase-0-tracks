@@ -1,0 +1,19 @@
+#body{
+    position: relative;
+    margin-left: 480px;
+    margin-top: 150px;
+    z-index: -1;
+}
+#hat{
+    position:absolute;
+    margin-left: 460px;
+    top: 60px;
+    z-index: 1;
+}
+
+#glasses{
+    position:absolute;
+    margin-left: 525px;
+    top: 250px;
+    z-index: 1;
+}
