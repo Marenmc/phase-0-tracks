@@ -9,17 +9,19 @@
 }
 
 #sidebar {
-    position:absolute;
+    position:fixed;
     top:0; bottom:0; left:0;
     width: 20%;
+    background: orange;
+    margin: auto;
 
 }
 
 #content {
     position: absolute;
     width:100%; height:50px;
-    padding-left: 155px;
-    text-align: left;
+    padding-left: 200px;
+    margin: auto;
 }
 
 blockquote {
@@ -45,7 +47,7 @@ image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 }
 
-@media screen and (max-width: 959px) and (min-width: 300
+/*@media screen and (max-width: 959px) and (min-width: 300
   px) {
 .container (max-width: 100%) mg {
   width:100%;
@@ -55,28 +57,27 @@ but it's optional! */
   width: 20%;
 }
 
-#main {
+#content {
   width:80%;
 }
-
-img {
-  width:100%;
 }
-}
+*/
 
-@media screen and (max-width: 640px) {
 
-#sidebar {
-  width: 100%;
-  float: left;
-}
+@media screen and (max-width: 500px) {
+ body {
+   font-size: 0.5em;}
+ html { font-size: 90.5%; }
+ h1 { font-size: 1.0em; }
 
-#main {
-  width:100%;
-  float: left;
-}
-}
 
+ }
+
+ @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
 
 figure {
   margin-left: 0px;
@@ -92,11 +93,3 @@ figcaption {
 body {
   max-width: 960px;
 }
-
-
-@media screen and (max-width: 500px) {
-  body {
-    background-color: gray;
-  }
-}
-
