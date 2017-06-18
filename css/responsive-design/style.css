@@ -9,26 +9,27 @@
 }
 
 #sidebar {
-    position:fixed;
+    position:absolute;
     top:0; bottom:0; left:0;
     width: 20%;
-    background: orange;
-    margin: auto;
 
 }
 
 #content {
     position: absolute;
     width:100%; height:50px;
-    padding-left: 200px;
-    margin: auto;
+    padding-left: 155px;
+    text-align: left;
+}
+
+img {
+  width: 100%;
 }
 
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
   margin-left: 0px;
-  width:;
 }
 
 cite {
@@ -47,7 +48,7 @@ image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 }
 
-/*@media screen and (max-width: 959px) and (min-width: 300
+@media screen and (max-width: 959px) and (min-width: 300
   px) {
 .container (max-width: 100%) mg {
   width:100%;
@@ -60,24 +61,37 @@ but it's optional! */
 #content {
   width:80%;
 }
+
+img {
+  width:100%;
 }
-*/
+}
 
+@media screen and (max-width: 640px) {
 
-@media screen and (max-width: 500px) {
- body {
-   font-size: 0.5em;}
- html { font-size: 90.5%; }
- h1 { font-size: 1.0em; }
+.container {
+  position:static;
+  padding:0
+  margin: auto;
+  width: 100%;
+}
 
+#sidebar {
+  width: 100%;
+  position: static;
+  padding-left: 0;
+  margin:auto;
+}
 
- }
+#content {
+  width:100%;
+  position: static;
+  padding-left: 0;
+  margin:auto;
 
- @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
+}
+}
+
 
 figure {
   margin-left: 0px;
@@ -93,3 +107,14 @@ figcaption {
 body {
   max-width: 960px;
 }
+
+
+@media screen and (max-width: 500px) {
+  body {
+   font-size: 0.5em;}
+ html { font-size: 90.5%; }
+ h1 { font-size: 1.0em; }
+  }
+}
+
+
