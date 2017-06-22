@@ -1,3 +1,43 @@
-body {
-  background-color: lightblue;
+header {
+  background-color: #008080;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.column-1 {
+  background-color: #F0F8FF;
+  width: 46%;
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 5px;
+  color:  #696969;
+
+}
+
+.column-2 {
+  background-color: #F0F8FF;
+  width: 46%;
+  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  margin-top: 5px;
+  color:  #696969;
+}
+
+#reflection {
+  clear: both;
+  background-color: #6495ED;
+  padding: 25px;
+  color: #DCDCDC;
+}
+
+footer {
+  background-color:#FFFAF0;
+  clear: both;
 }
