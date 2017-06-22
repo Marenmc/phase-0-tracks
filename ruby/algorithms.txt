@@ -1,0 +1,15 @@
+#Algorithm for using an elevator
+
+- Determine which floor you want to go to
+  - If the floor is greater than the floor you are on currently
+     - Press the button on top with an arrow pointing up
+  - If the floor is less than the floor you are on currently
+     - Press the button on the bottom with a downward arrow
+
+- Wait for the elevator to arrive
+
+- When the elevator arrives, walk through the open doors
+   - Press the button that matches the floor you want to go to
+     - Wait for the doors to close
+
+- When the doors open, walk out of the doors
