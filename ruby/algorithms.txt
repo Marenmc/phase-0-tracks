@@ -1,0 +1,96 @@
+#Algorithm for using an elevator
+
+- Determine which floor you want to go to
+  - If the floor is greater than the floor you are on currently
+     - Press the button on top with an arrow pointing up
+  - If the floor is less than the floor you are on currently
+     - Press the button on the bottom with a downward arrow
+
+- Wait for the elevator to arrive
+
+- When the elevator arrives, walk through the open doors
+   - Press the button that matches the floor you want to go to
+     - Wait for the doors to close
+
+- When the doors open, walk out of the doors
+
+
+#Algorithm for making breakfast 
+
+- Open the refrigerator
+- Search ingredients
+  - If the ingredient = yogurt
+    - Take it out of the refrigerator and put it on the countertop
+- Close the refrigerator 
+
+
+- Walk to the cupboard
+- Open the cupboard
+- Search inside the cupboard 
+  - If the ingredient = granola
+     - Take it out of the cupboard and put it on the countertop next to the yogurt
+- Close the cupboard
+
+
+- Walk to the plates/bowls cabinet
+- Open the cabinet
+- Locate the bowls
+   - Take 1 bowl out 
+   - Set it on the countertop next to the granola and yogurt
+- Close the cabinet
+ 
+
+- Open the silverware drawer
+- Locate the small spoons
+   - Take one spoon out and place it next to the yogurt, granola, and bowl
+- Close the silverware drawer
+
+
+- Open the yogurt container
+  - Place the lid on the countertop
+- Pick up the spoon
+  - Place it in the yogurt bowl
+  - Grab a scoop of yogurt
+- Determine how hungry you are
+  - If you are very hungry
+     - Repeat for 3 heaping scoops
+  - If you are moderately hungry
+     - Repeat for 2 scoops 
+- Rest your spoon in your bowl
+
+
+- Unscrew the lid of your granola
+- Shake the granola into your bowl on top of the yogurt
+  - If you determined before that you are very hungry 
+     - sprinkle approximately 1/4 cup granola
+  - If you determined before that you are moderately hungry
+     - sprinkle approximately 1/6 cup granola
+- If there is still granola in the jar
+  - Locate the jar lid
+     - Screw the lid back onto the granola
+  - Walk over to your cupboard
+    - Open the cupboard
+    - Find an empty spot in your cupboard about the size of the granola
+    - Place the granola inside the cupboard
+    - Close the door to the cupboard
+- If the jar is empty
+    - open the dishwasher
+    - Find an empty spot in the dishwasher
+    - Place the granola jar and lid inside the dishwasher
+    - Close the dishwasher
+
+
+- Walk over to the yogurt
+- Pick up the yogurt container
+  - If there is still yogurt in the container
+    - Locate the lid to the yogurt
+      - Put the lid back on your yogurt
+    - Walk over to your refrigerator
+      - Open the fridge
+      - Find an empty spot about the size of the yogurt container
+      - Place the yogurt in that spot inside the fridge
+      - Close the door to the fridge
+  - If the container is empty
+      - turn on the sink
+      - rinse the container
+      - Place the rinsed container in the recycling bin
