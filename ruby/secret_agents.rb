@@ -1,52 +1,46 @@
 
-# DEFINE THE METHOD TO ENCRYPT A PASSWORD
-def encrypt
-# Identify index of the first letter in the password
-index = 0
-encrypted_string = ""
-# Loop until you get to the last letter in the password
-while index < secret_password.length
-encrypted_string+= secret_password[index].next
-# Call the index  plus 1
-index += 1
-# end encryption method
-end
-
-#Take array of encrypted password letter and string it together
-puts encrypted_string
-
-
-
-
-# DEFINE METHOD TO DECRYPT A PASSWORD
-def decrypt
-# Identify the letter of the first character in the decrypted password
-# Define a method to encrypt a PASSWORD
-# Define a method to decrypt a PASSWORD
-# Ask for input_1
-# Provide output_1
-# Ask for input_2
-# Provide output_2
+##Write methods to encrypt and decrypt passwords:
 
 # METHOD TO ENCRYPT A PASSWORD
-def encrypt
-# Identify index of the first letter in the password
-secret_password = "secret_password"
-index = 0
-encrypted_string = ""
-# Loop until you get to the last letter in the
-while index < secret_password.length do
-encrypted_string+= secret_password[index].next
+def encrypt(secret_password)
+# Create a character index
+ index = 0
+# Create an empty string to have a return value
+ encrypted_string = ""
+# Loop until you get to the last letter in the password
+ while index < secret_password.length do
+  encrypted_string += secret_password[index].next
 # Call the index  plus 1
-index += 1
-end
+  index += 1
+ end
+ #return the implicit empty response at the end
+  encrypted_string
 # end encryption method
 end
 
-# METHOD TO DECRYPT A PASSWORD
-def decrypt
-# Identify the letter of the first character in the decrypted password
-decrypted = "decrypted"
+# ASK FOR PASSWORD FROM USER AND ENCRYPT IT
+puts "What is your password?"
+  secret_password = gets.chomp
+puts encrypt(secret_password)
 
+# METHOD TO DECRYPT A PASSWORD
+def decrypt(encrypted_password)
+index = 0
+# List the entire alphabet in order to match the letters of the decrypted password to their correct index
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+# Prepare an empty string to store results
+decrypted_string = ""
+# Create a loop to iterate over the encrypted password
+while index < encrypted_password.length do
+  decrypted_index = alphabet.index(encrypted_password[index])
+  decrypted_string+= alphabet[decrypted_index -1]
+    index += 1
+end
+#return the implicit empty response at the end
+  decrypted_string
 end
 
+# DECRYPT PASSWORD
+puts "What is your encrypted password?"
+  encrypted_password = gets.chomp
+puts decrypt(encrypted_password)
