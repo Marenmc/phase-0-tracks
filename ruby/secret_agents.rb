@@ -1,3 +1,4 @@
+
 # DEFINE THE METHOD TO ENCRYPT A PASSWORD
 def encrypt
 # Identify index of the first letter in the password
@@ -20,39 +21,32 @@ puts encrypted_string
 # DEFINE METHOD TO DECRYPT A PASSWORD
 def decrypt
 # Identify the letter of the first character in the decrypted password
+# Define a method to encrypt a PASSWORD
+# Define a method to decrypt a PASSWORD
+# Ask for input_1
+# Provide output_1
+# Ask for input_2
+# Provide output_2
+
+# METHOD TO ENCRYPT A PASSWORD
+def encrypt
+# Identify index of the first letter in the password
+secret_password = "secret_password"
 index = 0
-# List the entire alphabet in order to match the letters of the decrypted password to their correct index
-alphabet = "abcdefghijklmnopqrstuvwxyz"
-# Prepare an empty string to store results
-decrypted_string = ""
-# Create a loop to iterate over the encrypted password
-while index < decrypted.length do
-  alphabet.index(decrypted[index])
-  decrypted_index = alphabet.index(decrypted[index])
-  decrypted_string+= alphabet[decrypted_index -1]
-    index += 1
+encrypted_string = ""
+# Loop until you get to the last letter in the
+while index < secret_password.length do
+encrypted_string+= secret_password[index].next
+# Call the index  plus 1
+index += 1
 end
-# Display decrypted password
-  puts decrypted_string
-
+# end encryption method
 end
 
-encrypt
-decrypt
+# METHOD TO DECRYPT A PASSWORD
+def decrypt
+# Identify the letter of the first character in the decrypted password
+decrypted = "decrypted"
 
-# Ask the user to enter their password
-puts "Enter your password"
-# Make the password the variable
-secret_password = gets.chomp
-puts "Here, let us encrypt your password"
-encrypt("abc")
-decrypt(encrypt("swordfish"))
-
-puts "Yay. Go you. Whoo password security."
-
-
-
-
-
-
+end
 
