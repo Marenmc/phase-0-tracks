@@ -1,3 +1,4 @@
+
 ##Write methods to encrypt and decrypt passwords:
 
 # METHOD TO ENCRYPT A PASSWORD
@@ -38,7 +39,6 @@ end
 #return the implicit empty response at the end
   decrypted_string
 end
-
 
 # DECRYPT PASSWORD
 puts "What is your encrypted password?"
