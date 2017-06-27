@@ -21,10 +21,8 @@ puts "What year were you born?"
 
 if age == stated_age
   age = true
-  puts "Good math"
   else
-    age = false
-    puts "Bad math"
+  age = false
   end
 
 puts "Our company cafeteria serves garlic bread. Can I get you some?"
@@ -44,18 +42,40 @@ puts "Our company cafeteria serves garlic bread. Can I get you some?"
       end
 
 puts "Name any allergies you might have and type 'done' when finished."
-    allergies = gets.chomp
-   until allergies == "sunshine" do
-      puts "Do you have any other allergies?"
-      allergies = gets.chomp
-      allergies = true
-     else
-       allergies = false
-   end
-      break if allergies == "done"
-    if allergies == "sunshine"
-       puts "VAMPIRE ALERT!!!"
-    break if allergies == "done"
-        end
-   end
- end
+  loop do
+      allergy = gets.chomp
+      if allergy == "sunshine"
+        puts "Probably a vampire!"
+        break
+      elsif allergy == "done"
+        break
+      else
+        #ask another
+        puts "Do you have any other allergies?"
+      end
+    end
+  end
+
+  ## Answer to spit out ##
+  #Even if the employee is an amazing liar otherwise, anyone going by the name of “Drake Cula” or “Tu Fang” is clearly a vampire, because come on. In that case, you should print “Definitely a vampire.”
+   if (name == "Drake Cula" || name == "Tu Fang")
+      puts "Definitely a vampire"
+
+  #If the employee got their age right, and is willing to eat garlic bread or sign up for insurance, the result is “Probably not a vampire.”
+   elsif age && (garlic_bread || health_insurance)
+       puts "Probably not a vampire"
+
+  #If the employee got their age wrong, and hates garlic bread or waives insurance, the result is “Probably a vampire.”
+   elsif !age && !(garlic_bread || health_insurance)
+       puts "Probably a vampire"
+
+  #If the employee got their age wrong, hates garlic bread, and doesn’t want insurance, the result is “Almost certainly a vampire.”
+      elsif !(age || garlic_bread) and !health_insurance
+    puts "Almost certainly a vampire"
+
+      else
+      puts "Result Inconclusive"
+
+end
+
+  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends!"
