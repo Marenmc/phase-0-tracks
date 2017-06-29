@@ -7,7 +7,7 @@
 "iNvEsTiGaTiOn".swapcase
 # => “InVeStIgAtIoN”
 
-# "zom".tr_s!('o')
+"zom".insert(2,"o")
 # => “zoom”
 
 "enhance".center(12)
@@ -31,10 +31,9 @@
 "Elementary,    my   dear        Watson!".split.join(" ")
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+"z".each_codepoint.to_a
 # => 122
 # (What is the significance of the number 122 in relation to the character z?)
-#Something about ASCII
 
 "How many times does the letter 'a' appear in this string?".count("a")
 # => 4
