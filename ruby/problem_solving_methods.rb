@@ -4,14 +4,10 @@
 def search_array(arr, n)
   index = 0
   while index < arr.length
-    if n == arr[index]
-      puts index
-    else
-      p nil
-    end
+    return index if arr[index] == n
     index += 1
-
   end
+ nil
 end
 
 search_array([3, 234, 932], 932)
@@ -62,5 +58,3 @@ end
 
 passed_in_array = [1, 2, 1, 5, 3, 6, 4, 8, 19, 13, 2]
 p bubble_sort(passed_in_array)
-
-
