@@ -74,32 +74,24 @@ puts "Santa is #{santa.ethnicity}"
 # santa.age
 puts "In case you forgot, Santa is #{santa.age}"
 
-santas_array = []
-example_genders = ["female", "male", "gender queer", "bigender"]
-example_ethnicities = ["Asian", "Pacific Islander", "Native American", "white", "black", "Latino"]
+santas = []
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-#Create lots of santas
-while santas_array.length = example_ethnicities[-1]
-santas_array << santas = Santa.new
-end
-
-#Iterate over each of the 50 user
-santas_array.each do |action|
-  # Santa.new("woman","White")
-  santa.speak
-  santa.eat_milk_and_cookies("chocolate chip")
-  santa.santa_age
-  santa.celebrate_birthday
-  # santa.get_mad_at("Vixen")
-  # santa.gender = "gender queer"
-  # puts "Santa just had gender reassignment surgery. Now he is #{santa.gender}"
+example_genders.length.times do |i|
+  santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
 
 
+# #Create lots of santas
+# while santas.length = example_ethnicities[-1]
+# santas_array << santas = Santa.new
+# end
 
-# #Loop through all example genders or ethnicities until we run out
+
+#Loop through all example genders or ethnicities until we run out
 # example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 
 
