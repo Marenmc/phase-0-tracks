@@ -1,5 +1,7 @@
 #Create a santa class
 class Santa
+  attr_reader :ethnicity
+  attr_accessor :age, :gender
 
    #Initialize new santa
    def initialize(gender, ethnicity)
@@ -42,20 +44,19 @@ class Santa
     p @reindeer_ranking
   end
 
-  def gender=(new_gender)
-     @gender = new_gender
-     puts "Santa just had gender reassignment surgery. Now he is #{@gender}"
-  end
+#setter method
+  # def gender=(new_gender)
+  #    @gender = new_gender
+  # end
 
-  def ethnicity
-    @ethnicity
-    puts "Santa is #{@ethnicity}"
-  end
-
-  def age
-    @age
-    puts "In case you forgot, Santa is #{@age}"
-  end
+# #getter method
+#   def ethnicity
+#     @ethnicity
+#   end
+# #getter method
+#   def age
+#     @age
+#   end
 end
 
 
@@ -67,8 +68,12 @@ santa.santa_age
 santa.celebrate_birthday
 santa.get_mad_at("Vixen")
 santa.gender = "gender queer"
-santa.ethnicity
-santa.age
+puts "Santa just had gender reassignment surgery. Now he is #{santa.gender}"
+# santa.ethnicity
+puts "Santa is #{santa.ethnicity}"
+# santa.age
+puts "In case you forgot, Santa is #{santa.age}"
+
 
 # santas = []
 # example_genders = ["female", "male", "gender queer", "bigender"]
