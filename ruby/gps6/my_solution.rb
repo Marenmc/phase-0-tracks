@@ -1,6 +1,6 @@
 # Virus Predictor
 # I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# We spent [1.5] hours on this challenge.
 # EXPLANATION OF require_relative
 # Require_relative imports data from a file that is in a relative location calling on that file within quotation marks.
 #
@@ -76,8 +76,12 @@ end
 
 ## COMMENTS:
 #What are the differences between the two different hash syntaxes shown in the state_data file?
-  ##
+  ## There is a syntax with a quote and a hash rocket and a syntax with a colon after the key. Because there are two different hashes within the document, they are delineated by the different hash syntaxes.
 #What does require_relative do? How is it different from require?
+  ## Require_relative imports data from a file that is in a relative location calling on that file within quotation marks.
 #What are some ways to iterate through a hash?
+  ## You can iterate through a hash by using .each, .map, map! You just have to make sure to include both the key and the value in the pipes.
 #When refactoring virus_effects, what stood out to you about the variables, if anything?
+  ## We noticed that the variables were repeated several times throughout the code and were readable. We thought this would be a great opportunity to do attr_reader up at the top. We also noticed that when we used attr_reader up at the top, we didn't need the local variables or the instane variables.
 #What concept did you most solidify in this challenge?
+  ## This challenge most solidified attr_reader for me. I wish it solidified my understanding of loops more. Unfortunately I am still not the best with loops.
