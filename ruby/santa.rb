@@ -78,21 +78,21 @@ santas = []
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+# example_genders.length.times do |i|
+#   santas << Santa.new(example_genders[i], example_ethnicities[i])
+# end
+
+
+37.times do
+  gender_random_number = rand(0..6)
+  ethnicities_random_number = rand(0..6)
+  this_santa = Santa.new(example_genders[gender_random_number], example_ethnicities[ethnicities_random_number])
+  random_age = rand(0..140)
+  this_santa.age = random_age
+  santas << this_santa
+  p this_santa.age
 end
 
-
-# #Create lots of santas
-# while santas.length = example_ethnicities[-1]
-# santas_array << santas = Santa.new
-# end
-
-
-#Loop through all example genders or ethnicities until we run out
-# example_genders.length.times do |i|
-# santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
 
 
 
