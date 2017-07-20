@@ -2,24 +2,9 @@
 #
 # Create a Squirrel class that can be initialized with a color and location. There are gray, red, black, and even albino squirrels and they live in locations like the city, state, woods, in town, whatever you feel like.
 
-class Squirrel
-  def initialize(color, location)
-    @color = color
-    @location = location
-end
 #
 # For instance: one squirrel could be a gray squirrel who lives in the boonies, another instance of a squirrel could be red who lives in Manhattan. Initialize a couple of different squirrels to demonstrate this functionality.
 # ----
-class Squirrel
-  def initialize(color, location)
-    @color = color
-    @location = location
-end
-
-locations = ["city", "state", "woods", "in town", "Hawaii"]
-colors = ["gray", "black", "red", "albino"]
-
-newest_squirrel = Squirrel.new(locations.sample, colors.sample)
 
 # Our squirrels might want to find a new home base if too many humans or predators move in, but they can never change their color. Make the color readable from outside the class, and make the location readable and writeable.
 # ----
@@ -27,7 +12,6 @@ newest_squirrel = Squirrel.new(locations.sample, colors.sample)
 # Contrary to popular belief, squirrels don't hibernate during the winter, they just sleep a lot!
 #
 # Create two instance methods: `wake_up` and `sleep`. These should update an instance variable in order to let us know if the squirrel is awake or not. Every squirrel should start out asleep when they are initialized.
-# ----
 
 # In preparation for winter, squirrels and other small animals hide nuts to get them through the winter. Nuts are hidden in various locations.
 #
@@ -36,6 +20,44 @@ newest_squirrel = Squirrel.new(locations.sample, colors.sample)
 
 # During the summer and fall, the squirrel has to hide their nuts. Create a `store_food` instance method that takes a hoard location and a number of nuts, and stores this in the `hoard_locations` data structure. If the hoard location already exists, this method should add to the existing number of nuts there. If the hoard location doesn't exist, it should create a new entry.
 # ---
+
+class Squirrel
+  attr_reader :color, :asleep
+  attr_accessor :location
+
+  def initialize(color, location)
+    @color = color
+    @location = location
+    @asleep = true
+  end
+
+  def wake_up
+    @asleep = false
+  end
+
+  def sleep
+    @asleep = true
+  end
+
+  def store_food (hoard_location, nuts_no)
+    @
+
+end
+
+locations = ["city", "state", "woods", "in town", "Hawaii"]
+colors = ["gray", "black", "red", "albino"]
+hoard_locations = {
+
+}
+
+3.times do
+p newest_squirrel = Squirrel.new(locations.sample, colors.sample)
+end
+
+
+
+
+
 
 # Every day during the winter, the squirrel will wake up and find one of his nut stores. Squirrels don't have a great memory so the squirrel will just find one of the stores and eat three of the nuts.
 #
