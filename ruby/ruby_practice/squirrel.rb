@@ -22,13 +22,15 @@
 # ---
 
 class Squirrel
-  attr_reader :color, :asleep
-  attr_accessor :location
+  attr_reader :color, :asleep, :hoard_location
+  attr_accessor :location, :nuts_no
 
   def initialize(color, location)
     @color = color
     @location = location
     @asleep = true
+    @hoard_location = {}
+    @nuts_no = 0
   end
 
   def wake_up
@@ -40,19 +42,20 @@ class Squirrel
   end
 
   def store_food (hoard_location, nuts_no)
-    @
-
+    @hoard_locations{hoard_location} = nuts_no
+    p @hoard_locations
+  end
 end
 
 locations = ["city", "state", "woods", "in town", "Hawaii"]
 colors = ["gray", "black", "red", "albino"]
-hoard_locations = {
 
-}
 
 3.times do
 p newest_squirrel = Squirrel.new(locations.sample, colors.sample)
+p newest_squirrel.store_food("tree", "4")
 end
+
 
 
 
@@ -68,3 +71,4 @@ end
 #
 # Create an instance method called `forget` that deletes a random hoard location from the squirrel's hoard locations and returns a string telling us that a new tree has sprouted.
 # ---
+
