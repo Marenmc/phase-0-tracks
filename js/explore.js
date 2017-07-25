@@ -15,6 +15,7 @@ function reverseString(str) {
         newString += str[i];
     }
     console.log( newString );
+    return newString
 }
 
 reverseString('Maren');
