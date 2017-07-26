@@ -7,29 +7,29 @@
 // input: the array of phrases
 // output: the phrase that is the longest
 
-// var phrases = ["Get in here", "Get out", "Get out of there", "Get a move on", "Get it on", "Get lost"];
-// var kitchenPhrases = ["kiss the cook", "wash the dishes", "bus the table", "let's say grace"]
+var phrases = ["Get in here", "Get out", "Get out of there", "Get a move on", "Get it on", "Get lost"];
+var kitchenPhrases = ["kiss the cook", "wash the dishes", "bus the table", "let's say grace"]
 
-// function longestPhrase(array) {
-//   newArray = []
-//   for (var i = 0; i < array.length; i++) {
-//     var length = array[i].length;
-//     newArray.push(length);
-//   }
-//   return newArray;
-// }
+function longestPhrase(array) {
+  newArray = []
+  for (var i = 0; i < array.length; i++) {
+    var length = array[i].length;
+    newArray.push(length);
+  }
+  return newArray;
+}
 
-// //"Get" phrases
-// longestPhrase(phrases)
-// var max = (Math.max.apply( Math, newArray ))
-// var longestphraseIndex = newArray.indexOf(max)
-// console.log(phrases[longestphraseIndex])
+//"Get" phrases
+longestPhrase(phrases)
+var max = (Math.max.apply( Math, newArray ))
+var longestphraseIndex = newArray.indexOf(max)
+console.log(phrases[longestphraseIndex])
 
-// //"Kitchen" phrases
-// longestPhrase(kitchenPhrases)
-// var max = (Math.max.apply( Math, newArray ))
-// var longestphraseIndex = newArray.indexOf(max)
-// console.log(kitchenPhrases[longestphraseIndex])
+//"Kitchen" phrases
+longestPhrase(kitchenPhrases)
+var max = (Math.max.apply( Math, newArray ))
+var longestphraseIndex = newArray.indexOf(max)
+console.log(kitchenPhrases[longestphraseIndex])
 
 // RELEASE 1
 // create an object for steven
@@ -82,3 +82,25 @@ function matchData(obj1, obj2) {
 console.log(matchData(pizza1, pizza2))
 
 //RELEASE 2
+// Create a function
+// pass in an integer for array length
+// create an empty array for the new strings
+// create loop to iterate the same number of times as the integer we pass in
+// use a random  word generator to generate words
+// push the words into the array
+// and return an array of strings of the given length
+
+function randomTest(integer) {
+  stringArray = [];
+  var newString = "";
+  for (var i = 0; i < integer; i++) {
+    stringArray.push(newString = "l");
+  }
+  return stringArray
+}
+
+  console.log(randomTest(14))
+
+
+
+
