@@ -1,0 +1,67 @@
+1. Display the information in one table (either table is fine).
+
+Query: 
+select * from ice_creams;
+Output: 
+1|Jamoca Almond Fudge|10|false|1
+2|Hard Oatmeal|10|false|1
+3|Daquri Ice|10|true|2
+4|Rainbow Sherbet|10|true|2
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE ice_creams SET gallons_in_stock = 20 WHERE flavor_name = "Hard Oatmeal";
+select * from ice_creams;
+
+1|Jamoca Almond Fudge|10|false|1
+2|Hard Oatmeal|20|false|1
+3|Daquri Ice|10|true|2
+4|Rainbow Sherbet|10|true|2
+
+3. Display the information in both tables using one query.
+select * from store_locations
+  JOIN ice_creams on store_locations.id = ice_creams.store_id;
+
+1|Newberry Street|1|Jamoca Almond Fudge|10|false|1
+1|Newberry Street|2|Hard Oatmeal|20|false|1
+2|Jamaica Plain|3|Daquri Ice|10|true|2
+2|Jamaica Plain|4|Rainbow Sherbet|10|true|2
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+select flavor_name,
+  store_locations.location
+  from store_locations
+JOIN ice_creams on store_locations.id = ice_creams.store_id;
+
+Jamoca Almond Fudge|Newberry Street
+Hard Oatmeal|Newberry Street
+Daquri Ice|Jamaica Plain
+Rainbow Sherbet|Jamaica Plain
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM ice_creams
+WHERE dairy_free = "true";
+
+select * from ice_creams;
+1|Jamoca Almond Fudge|10|false|1
+2|Hard Oatmeal|20|false|1
+
+
+TYPES OF JOINS
+http://www.dofactory.com/sql/join
+
+INNER JOIN 
+select * from ice_creams
+  INNER JOIN store_locations on ice_creams.store_id = store_locations.id;
+1|Jamoca Almond Fudge|10|false|1|1|Newberry Street
+2|Hard Oatmeal|20|false|1|1|Newberry Street
+
+
+LEFT JOIN
+SELECT * from ice_creams
+   LEFT JOIN store_locations on ice_creams.store_id = store_locations.id;
+1|Jamoca Almond Fudge|10|false|1|1|Newberry Street
+2|Hard Oatmeal|20|false|1|1|Newberry Street
+
+There is also an OUTER JOIN, RIGHT JOIN, FULL JOIN
+
+
