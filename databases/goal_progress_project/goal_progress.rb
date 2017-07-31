@@ -39,26 +39,40 @@ create_milestones_table_cmd = <<-SQL
 SQL
 
 
-# # create tables(if they're not there already)
+#create tables(if they're not there already)
 
 db.execute(create_users_table_cmd)
 db.execute(create_goals_table_cmd)
 db.execute(create_milestones_table_cmd)
 
-# add a test goal
-db.execute("INSERT INTO goals(description, met, due_date, user_id) VALUES ('Land a dream job', 'false', '2017-10-31', 1)")
+#create a new user within the database
+puts "-------WELCOME TO YOUR GOAL PROGRESS TRACKER!-------"
+puts "Fill out some information about what your goals are, and we'll help you track your progress!"
+puts "Let's get started..."
+puts "-----------"
 
-# add a test milestone
-db.execute("INSERT INTO milestones(description, met, due_date, set_reminder, goal_id) VALUES ('Enroll in DevBootcamp', 'true', '2017-06-04', 'true', 1)")
 
-# add a test user
-db.execute("INSERT INTO users(name) VALUES ('Maren McMullan')")
+puts "What's your name?"
+@users_name = gets.chomp
+db.execute("INSERT INTO users( name ) VALUES (?)", [@users_name])
+  puts "Nice to meet you, #{@users_name}."
 
-# add information from a user to a database
-puts "What's your goal?"
-goal_description = gets.chomp
-puts "Great! Your goal is #{goal_description}."
+# Ask user for their goal and print it to the database
+  puts "What is one goal you're currently working toward?"
+  @goal_description = gets.chomp
+  puts "Great! Your goal is #{@goal_description}."
+  db.execute("INSERT INTO goals( description ) VALUES (?)", [@goal_description])
+  puts "Let's make this a SMART goal. Enter a date by which you would like to achieve this goal."
+  @goal_due_date = gets.chomp
+  db.execute("INSERT INTO goals( due_date ) VALUES (?)", [@goal_due_date])
+  puts "ok! By #{@goal_due_date} you want to #{@goal_description}."
 
-db.execute("INSERT INTO goals(description) VALUES (?)", (#{goal_description})")
 
-## How to add user input into a table
+# # add a test goal
+# db.execute("INSERT INTO goals(description, met, due_date, user_id) VALUES ('Land a dream job', 'false', '2017-10-31', 1)")
+
+# # add a test milestone
+# db.execute("INSERT INTO milestones(description, met, due_date, set_reminder, goal_id) VALUES ('Enroll in DevBootcamp', 'true', '2017-06-04', 'true', 1)")
+
+# # add a test user
+# db.execute("INSERT INTO users(name) VALUES ('Maren McMullan')")
