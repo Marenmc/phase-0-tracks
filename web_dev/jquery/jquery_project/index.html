@@ -2,15 +2,51 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml: lang="en">
 
 <head>
-  <title>jQuery Test</title>
-  <script type="text/javascript" scr="jquery/jquery-3.2.1.min.js"></script>
+  <title> jQuery Test </title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
   <script type="text/javascript">
      $(document).ready(function(){
         alert("I'm working!");
      });
   </script>
+
+  <script src="carouselengine/jquery.js"></script>
+
+  <script>
+   $(document).ready(function(){
+    $("div").hover(function(){
+        $(gift_tags).css("background-color", "yellow");
+        }, function(){
+        $(gift_tags).css("background-color", "pink");
+    });
+});
+</script>
 </head>
 <body>
-   <p>Look at me. I am learning jQuery.</p>
+   <p>Here are some great gift ideas!</p>
+   <div id="carousel-container">
+      <div id="carousel1" style="display:block:position:relative;width:50%;max-width:400px">
+        <div class="carousel1-list-container" style="overflow:hidden;">
+          <ul class="carousel1-list">
+            <li class="carousel1-item">
+              <div class="carousel-item-container">
+   <div class="carousel1-image">
+      <a href="jquery_project/cheersJulieandKevin.png" title="Cheers Julie and Kevin" class="html5light" scr="jquery_project/cheersJulieandKevin.png" alt="cheersJulieandKevin"/></a>
+      <div class="carousel1-text-bg"></div>
+      <div class="carousel1-title">Cheers Julie and Kevin</div>
+    </div>
+   </div>
+             </li>
+          </ul>
+        </div>
+      <div class="carousel1-prev"></div>
+
+      <div id="mens_gift"><img src="Mens_gift.png" alt="mens_gift"/></div>
+
+   </div>
+
+
 </body>
 </html>
