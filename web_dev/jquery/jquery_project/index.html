@@ -11,42 +11,20 @@
         alert("I'm working!");
      });
   </script>
-
-  <script src="carouselengine/jquery.js"></script>
-
   <script>
-   $(document).ready(function(){
-    $("div").hover(function(){
-        $(gift_tags).css("background-color", "yellow");
-        }, function(){
-        $(gift_tags).css("background-color", "pink");
+  $(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '400px'});
     });
 });
-</script>
+  </script>
 </head>
 <body>
-   <p>Here are some great gift ideas!</p>
-   <div id="carousel-container">
-      <div id="carousel1" style="display:block:position:relative;width:50%;max-width:400px">
-        <div class="carousel1-list-container" style="overflow:hidden;">
-          <ul class="carousel1-list">
-            <li class="carousel1-item">
-              <div class="carousel-item-container">
-   <div class="carousel1-image">
-      <a href="jquery_project/cheersJulieandKevin.png" title="Cheers Julie and Kevin" class="html5light" scr="jquery_project/cheersJulieandKevin.png" alt="cheersJulieandKevin"/></a>
-      <div class="carousel1-text-bg"></div>
-      <div class="carousel1-title">Cheers Julie and Kevin</div>
-    </div>
-   </div>
-             </li>
-          </ul>
-        </div>
-      <div class="carousel1-prev"></div>
-
-      <div id="mens_gift"><img src="Mens_gift.png" alt="mens_gift"/></div>
-
-   </div>
-
-
+   <h1>Want to see something cool?</h1>
+   <button>Click here to watch a pink box appear out of nowhere</button>
+   <div id="mens_gift"><img src="Mens_gift.png" alt="mens_gift" style="height:200px;position:absolute;"/></div>
+      <div style="background:hotpink;height:100px;width:80px;position:absolute;"></div>
+      <div
+      id="mens_gift"><img src="Mens_gift.png" alt="mens_gift" style="height: 180px;position:absolute;"/></div>
 </body>
 </html>
