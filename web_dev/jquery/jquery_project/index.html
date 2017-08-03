@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml: lang="en">
+
+<head>
+  <title> jQuery Test </title>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script type="text/javascript">
+     $(document).ready(function(){
+        alert("I'm working!");
+     });
+  </script>
+  <script>
+  $(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '400px'});
+    });
+});
+  </script>
+</head>
+<body>
+   <h1>Want to see something cool?</h1>
+   <button>Click here to watch a pink box appear out of nowhere</button>
+   <div id="mens_gift"><img src="Mens_gift.png" alt="mens_gift" style="height:200px;position:absolute;"/></div>
+      <div style="background:hotpink;height:100px;width:80px;position:absolute;"></div>
+      <div
+      id="mens_gift"><img src="Mens_gift.png" alt="mens_gift" style="height: 180px;position:absolute;"/></div>
+</body>
+</html>
