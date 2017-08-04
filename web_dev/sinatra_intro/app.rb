@@ -64,3 +64,18 @@ get '/' do
     "Good job"
   end
 end
+
+#Use route parameter to add two numbers
+get '/:number_1/plus/:number_2' do
+  x = params[:number_1].to_i
+  y = params[:number_2].to_i
+  z = x+y
+  "#{params[:number_1]} + #{params[:number_2]} = #{z}"
+  x+y
+end
+
+get '/students/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])[0]
+  student.to_s
+end
+
