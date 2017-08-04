@@ -8,9 +8,14 @@ db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
 
 # show students on the home page
+# get '/' do
+#   @students = db.execute("SELECT * FROM students")
+#   erb :home
+# end
+
 get '/' do
-  @students = db.execute("SELECT * FROM students")
-  erb :home
+  @campuses = db.execute("SELECT distinct(campus) FROM students")
+  erb :DBC_students
 end
 
 get '/students/new' do
