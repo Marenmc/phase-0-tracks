@@ -70,12 +70,12 @@ get '/:number_1/plus/:number_2' do
   x = params[:number_1].to_i
   y = params[:number_2].to_i
   z = x+y
-  "#{params[:number_1]} + #{params[:number_2]} = #{z}"
-  x+y
+  "#{params[:number_1]} + #{params[:number_2]}= #{z}"
+
 end
 
-get '/students/:campus' do
-  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])[0]
+get '/students/:age' do
+  student = db.execute("SELECT * FROM students WHERE age=?", [params[:age]])[0]
   student.to_s
 end
 
